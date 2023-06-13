@@ -1,0 +1,17 @@
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MichuBank.exe
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MichuBank.deps.json
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MichuBank.runtimeconfig.json
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MichuBank.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MichuBank.pdb
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\refint\MichuBank.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.pdb
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.genruntimeconfig.cache
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\ref\MichuBank.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.csproj.CopyComplete
