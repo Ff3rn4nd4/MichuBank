@@ -63,14 +63,14 @@ void CreateNewUser()
             Console.WriteLine("\t Intentalo de nuevo: ");
             Console.Write("Id: ");
             Id = int.Parse(Console.ReadLine());
-        }else if (Id < 0)
+        }else if(Id < 0)
             {
                 Console.WriteLine("Este Id es invalido!, solo aceptamos Id's positivos");
                 Console.WriteLine("\t Intentalo de nuevo: ");
                 Console.Write("Id: ");
                 Id = int.Parse(Console.ReadLine());
             }
-    }while(Storage.IsIdExist(Id)! && Id > 0);
+    }while(Storage.IsIdExist(Id) || Id < 0);
     
 
     Console.Write("Nombre: ");
@@ -100,21 +100,21 @@ void CreateNewUser()
     Console.WriteLine("\nPara brindarte un mejor servicio, indicanos que papel desempenias!");
     Console.WriteLine("Si eres cliente, ingresa 'c'");
     Console.WriteLine("Si eres Empleado, ingresa 'e'");
-    Console.Write("Comentanos cual es tu papel como usuario:");
+    Console.Write("\nComentanos cual es tu papel como usuario:");
     char userType = char.Parse(Console.ReadLine());
         
         User newUser;
 
         if(userType.Equals('c'))
         {
-            Console.WriteLine("En este caso solo existe M: persona moral");
+            Console.WriteLine("\nEn este caso solo existe M: persona moral");
             Console.Write("Su regimen fiscal es: ");
             char TaxRegime = char.Parse(Console.ReadLine());
 
             newUser = new Client(Id, Name, Email, Balance, TaxRegime);
         }else 
             {
-                Console.WriteLine("En este caso solo existe IT: Informacion Tecnologica");
+                Console.WriteLine("\nEn este caso solo existe IT: Informacion Tecnologica");
                 Console.Write("Indicanos a que departamento perteneces: ");
                 string Department = Console.ReadLine();
 
@@ -149,7 +149,7 @@ void DeleteUser()
                 Console.Write("Id: ");
                 Id = int.Parse(Console.ReadLine());
             }
-    }while(!Storage.IsIdExist(Id) && Id < 0);
+    }while(!Storage.IsIdExist(Id) || Id < 0);
 
     string result = Storage.DeleteUser(Id);
 

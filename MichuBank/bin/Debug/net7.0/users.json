@@ -14,5 +14,13 @@
     "Email": "dan@gmail.com",
     "Balance": 8160.0,
     "RegisterDate": "2023-06-14T02:18:13.3233374-06:00"
+  },
+  {
+    "Department": "IT",
+    "Id": 1,
+    "Name": "Fer",
+    "Email": "fer@gmail.com",
+    "Balance": 1050.00,
+    "RegisterDate": "2023-06-14T03:22:47.2518245-06:00"
   }
 ]
