@@ -1,12 +1,14 @@
 namespace MichuBank;
 
 //Clase hija de Users
-public class Client : User
+public class Client : User,IPerson
 {
     public char TaxRegime{ get ; set; }
+    public Client() {}
     public Client(int Id, string Name, string Email, decimal Balance, char TaxRegime) : base(Id, Name, Email, Balance)
     {
         this.TaxRegime = TaxRegime;
+        SetBalance(Balance);
     }
 
     //Sobre escribiendo metodos
@@ -21,5 +23,15 @@ public class Client : User
     public override string ShowData()
     {
         return base.ShowData() + $", Regimen fisca: {this.TaxRegime}";
+    }
+
+    public string GetName()
+    {
+        return Name;
+    }
+
+    public string GetCountry()
+    {
+        return "Mexico";
     }
 }

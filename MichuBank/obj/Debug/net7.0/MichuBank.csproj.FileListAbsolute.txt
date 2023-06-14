@@ -15,3 +15,8 @@ C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net
 C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\ref\MichuBank.dll
 C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\obj\Debug\net7.0\MichuBank.csproj.CopyComplete
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MailKit.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\MimeKit.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\DELL\Desktop\Capacitacion\CursoNet\BankSolution\MichuBank\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
