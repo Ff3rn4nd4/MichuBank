@@ -107,12 +107,14 @@ void CreateNewUser()
 
         if(userType.Equals('c'))
         {
+            Console.WriteLine("En este caso solo existe M: persona moral");
             Console.Write("Su regimen fiscal es: ");
             char TaxRegime = char.Parse(Console.ReadLine());
 
             newUser = new Client(Id, Name, Email, Balance, TaxRegime);
         }else 
             {
+                Console.WriteLine("En este caso solo existe IT: Informacion Tecnologica");
                 Console.Write("Indicanos a que departamento perteneces: ");
                 string Department = Console.ReadLine();
 
@@ -129,8 +131,38 @@ void CreateNewUser()
 
 void DeleteUser()
 {
+    Console.Clear();
+    Console.Write("Ingresa el Id del usuario que quieras eliminar: ");
+    int Id = int.Parse(Console.ReadLine());
+
+    do{
+        if(!Storage.IsIdExist(Id))
+        {
+            Console.WriteLine("Este Id no existe!");
+            Console.WriteLine("\t Intentalo de nuevo: ");
+            Console.Write("Id: ");
+            Id = int.Parse(Console.ReadLine());
+        }else if (Id < 0)
+            {
+                Console.WriteLine("Este Id es invalido!, solo aceptamos Id's positivos");
+                Console.WriteLine("\t Intentalo de nuevo: ");
+                Console.Write("Id: ");
+                Id = int.Parse(Console.ReadLine());
+            }
+    }while(!Storage.IsIdExist(Id) && Id < 0);
+
+    string result = Storage.DeleteUser(Id);
+
+        if(result.Equals("Success"))
+            {
+                Console.Write("Usuario eliminado con exito!");
+                Thread.Sleep(2000);
+                showMenu();
+            }
+
 
 }
+
 static bool ValidacionEmail(string Email)
 {
     return Email != null && Regex.IsMatch(Email, "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@(([a-zA-Z]+[\\w-]+\\.){1,2}[a-zA-Z]{2,4})$");

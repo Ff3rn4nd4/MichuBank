@@ -60,6 +60,42 @@ public static class Storage
         return NewUserList;
     }
 
+    public static string DeleteUser(int Id)
+    {
+        string usersInFile = "";
+        var ListUsers = new List<User>();
+
+        if(File.Exists(filePath))
+            usersInFile = File.ReadAllText(filePath);
+
+        //Consultando los datos del json
+        var ListObjects = JsonConvert.DeserializeObject<List<object>>(usersInFile);
+
+        if(ListObjects == null)
+            return "Oops!, No hay usuarios registrados";
+
+        foreach(object obj in ListObjects)
+        {
+            User NewUser;
+            JObject user = (JObject)obj;
+
+            if(user.ContainsKey("TaxRegime"))
+                NewUser = user.ToObject<Client>();
+            else 
+                NewUser = user.ToObject<Employe>();
+
+            ListUsers.Add(NewUser);
+        }
+
+        var UsersToDelete = ListUsers.Where(user => user.GetId() == Id).Single();
+        ListUsers.Remove(UsersToDelete);
+
+        JsonSerializerSettings settings = new JsonSerializerSettings { Formatting = Formatting.Indented};
+        string json = JsonConvert.SerializeObject(ListUsers, settings);
+
+        File.WriteAllText(filePath, json);
+        return "Success";
+    }
     public static bool IsIdExist(int id)
     { 
            List<User> userList = GetNewUsers();
