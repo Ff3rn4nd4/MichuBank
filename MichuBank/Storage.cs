@@ -59,4 +59,13 @@ public static class Storage
         var NewUserList = ListUsers.Where(user => user.GetRegisterDate().Date.Equals(DateTime.Today)).ToList();
         return NewUserList;
     }
+
+    public static bool IsIdExist(int id)
+    { 
+           List<User> userList = GetNewUsers();
+           //La lista recorre todos los id que estan guardados
+           bool exists = userList.Any(user => user.GetId() == id); 
+           //Retorna un true/false para que sea mas sencillo 
+           return exists;
+    }
 }

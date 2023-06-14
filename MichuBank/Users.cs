@@ -30,6 +30,17 @@ public class User
     {
         return RegisterDate;
     }
+
+    public int GetId()
+    {
+        //Para poder utilizarlo en otras clases
+        return Id;
+    }
+
+    public string GetEmail()
+    {
+        return Email;
+    }
     public virtual void SetBalance(decimal amount)
     {
         decimal quantity = 0;

@@ -12,7 +12,31 @@
     "Id": 2,
     "Name": "Fernanda",
     "Email": "fer@gmail.com",
-    "Balance": 4200.00,
+    "Balance": 4200.0,
     "RegisterDate": "2023-06-13T18:04:03.3404217-06:00"
+  },
+  {
+    "TaxRegime": "M",
+    "Id": 1,
+    "Name": "Fer",
+    "Email": "fer.com",
+    "Balance": 714.0,
+    "RegisterDate": "2023-06-14T01:53:37.7716771-06:00"
+  },
+  {
+    "TaxRegime": "M",
+    "Id": 2,
+    "Name": "Francisco",
+    "Email": "fran@gmail.com",
+    "Balance": 1020.0,
+    "RegisterDate": "2023-06-14T02:04:41.1565846-06:00"
+  },
+  {
+    "TaxRegime": "M",
+    "Id": 3,
+    "Name": "Daniel",
+    "Email": "dan@gmail.com",
+    "Balance": 8160.00,
+    "RegisterDate": "2023-06-14T02:18:13.3233374-06:00"
   }
 ]
