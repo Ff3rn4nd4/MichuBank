@@ -20,7 +20,15 @@
     "Id": 1,
     "Name": "Fer",
     "Email": "fer@gmail.com",
-    "Balance": 1050.00,
+    "Balance": 1050.0,
     "RegisterDate": "2023-06-14T03:22:47.2518245-06:00"
+  },
+  {
+    "Department": "TI",
+    "Id": 4,
+    "Name": "Javier",
+    "Email": "javier@hotmail.com",
+    "Balance": 1000.0,
+    "RegisterDate": "2023-06-14T04:03:56.2258118-06:00"
   }
 ]

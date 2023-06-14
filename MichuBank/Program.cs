@@ -77,26 +77,32 @@ void CreateNewUser()
     string Name = Console.ReadLine();
     Console.Write("Email:");
     string Email = Console.ReadLine();
-        if(ValidacionEmail(Email))
-        {
-            Console.WriteLine("\tEl email es válido!\n");
-        }else
+
+        do{
+            if(ValidacionEmail(Email))
             {
-                Console.WriteLine("\nEl email no es válido, vuelve a intentarlo!");
-                Console.WriteLine("\tIntentalo de nuevo!");
-                Console.Write("Email:");
-                Email = Console.ReadLine();
-            }
+                Console.WriteLine("\tEl email es válido!\n");
+            }else
+                {
+                    Console.WriteLine("\nEl email no es válido, vuelve a intentarlo!");
+                    Console.WriteLine("\tIntentalo de nuevo!");
+                    Console.Write("Email:");
+                    Email = Console.ReadLine();
+                }
+        }while (!ValidacionEmail(Email));
 
     Console.Write("Balance:");
     decimal Balance = Decimal.Parse(Console.ReadLine());
-        if(Balance < 0)
-        {
-            Console.WriteLine("\nLo siento! no puedes ingresar movimientos de menos de $0.0");
-            Console.WriteLine("\tIntentalo de nuevo!");
-            Console.Write("Balance:");
-            Balance = Decimal.Parse(Console.ReadLine());
-        }
+        do{
+            if(Balance < 0)
+            {
+                Console.WriteLine("\nLo siento! no puedes ingresar movimientos de menos de $0.0");
+                Console.WriteLine("\tIntentalo de nuevo!");
+                Console.Write("Balance:");
+                Balance = Decimal.Parse(Console.ReadLine());
+            }
+        }while(Balance < 0);
+        
     Console.WriteLine("\nPara brindarte un mejor servicio, indicanos que papel desempenias!");
     Console.WriteLine("Si eres cliente, ingresa 'c'");
     Console.WriteLine("Si eres Empleado, ingresa 'e'");
@@ -135,21 +141,18 @@ void DeleteUser()
     Console.Write("Ingresa el Id del usuario que quieras eliminar: ");
     int Id = int.Parse(Console.ReadLine());
 
-    do{
-        if(!Storage.IsIdExist(Id))
+    if(!Storage.IsIdExist(Id)){
+        Console.WriteLine("Este Id no existe!");
+        Console.WriteLine("\t Intentalo de nuevo: ");
+        Console.Write("Id: ");
+        Id = int.Parse(Console.ReadLine());
+    }else if(Id < 0)
         {
-            Console.WriteLine("Este Id no existe!");
+            Console.WriteLine("Este Id es invalido!, solo aceptamos Id's positivos");
             Console.WriteLine("\t Intentalo de nuevo: ");
             Console.Write("Id: ");
             Id = int.Parse(Console.ReadLine());
-        }else if (Id < 0)
-            {
-                Console.WriteLine("Este Id es invalido!, solo aceptamos Id's positivos");
-                Console.WriteLine("\t Intentalo de nuevo: ");
-                Console.Write("Id: ");
-                Id = int.Parse(Console.ReadLine());
-            }
-    }while(!Storage.IsIdExist(Id) || Id < 0);
+        }
 
     string result = Storage.DeleteUser(Id);
 
@@ -159,8 +162,6 @@ void DeleteUser()
                 Thread.Sleep(2000);
                 showMenu();
             }
-
-
 }
 
 static bool ValidacionEmail(string Email)
